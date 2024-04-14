@@ -1,0 +1,47 @@
+﻿@model IEnumerable<GRP7_GestionEcole.Models.ENTITIES.Classe>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ajouter une nouvelle classe</h1>
+
+<p>
+    <a asp-action="Create">Ajouter</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomClasse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomCours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreEtudiant)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomClasse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomCours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreEtudiant)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IDClasse">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IDClasse">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IDClasse">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

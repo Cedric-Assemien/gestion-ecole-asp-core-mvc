@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GRP7_GestionEcole.props" />
+</Project>

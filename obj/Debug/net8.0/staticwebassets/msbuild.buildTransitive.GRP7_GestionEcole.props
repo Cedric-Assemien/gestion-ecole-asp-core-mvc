@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\GRP7_GestionEcole.props" />
+</Project>

@@ -1,0 +1,42 @@
+﻿@model GRP7_GestionEcole.Models.ENTITIES.Absence
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Absence</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomAbsent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomAbsent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateAbsence)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateAbsence)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MotifAbsent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MotifAbsent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreHeureAbsence)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreHeureAbsence)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.AbsenceID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

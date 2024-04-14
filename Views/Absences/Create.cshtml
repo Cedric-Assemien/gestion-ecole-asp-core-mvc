@@ -1,0 +1,48 @@
+﻿@model GRP7_GestionEcole.Models.ENTITIES.Absence
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Absence</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomAbsent" class="control-label"></label>
+                <input asp-for="NomAbsent" class="form-control" />
+                <span asp-validation-for="NomAbsent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateAbsence" class="control-label"></label>
+                <input asp-for="DateAbsence" class="form-control" />
+                <span asp-validation-for="DateAbsence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotifAbsent" class="control-label"></label>
+                <input asp-for="MotifAbsent" class="form-control" />
+                <span asp-validation-for="MotifAbsent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreHeureAbsence" class="control-label"></label>
+                <input asp-for="NombreHeureAbsence" class="form-control" />
+                <span asp-validation-for="NombreHeureAbsence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
